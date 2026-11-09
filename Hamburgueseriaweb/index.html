@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hamburguesas El Molino</title>
+<meta name="description" content="El Molino: Comida Rápida. Mira el menú, elige tu combo y haz tu pedido.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bowlby+One&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<header class="encabezado">
+  <div class="contenedor barra">
+    <a class="logo" href="#inicio" aria-label="El Molino, ir al inicio">El Molino</a>
+    <button class="burger" id="burger" aria-expanded="false" aria-controls="nav" aria-label="Abrir menú de navegación"><span></span><span></span><span></span></button>
+    <nav class="nav" id="nav" aria-label="Principal">
+      <ul>
+        <li><a href="#menu">Menú</a></li>
+        <li><a href="#promos">Promociones</a></li>
+        <li><a href="#preguntas">Preguntas</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+        <li><a class="btn sec" href="#pedido">Pedir ahora</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="heroe" id="inicio">
+    <div class="contenedor">
+      <div>
+        <h1>Hecha al momento. Lista en menos de 10 minutos.</h1>
+        <p>Hamburguesas de carne 100 % de res, papas fritas deliciosas y bebidas frías refrescantes. Elige tu combo y recógelo en el local o pídelo a domicilio.</p>
+        <div class="acciones">
+          <a class="btn" href="#menu">Menú</a>
+          <a class="btn sec" href="#pedido">Pedir ahora</a>
+        </div>
+        <div class="datos"><span>Abierto todos los días de 11:00 a. m. a 11:00 p. m.</span></div>
+      </div>
+      <figure>
+        <img src="img/ilya-mashkov-_qxbJUr9RqI-unsplash-Photoroom.png" width="1000" height="800" alt="Una hamburguesa">
+      </figure>
+    </div>
+  </section>
+
+  <section id="menu">
+    <div class="contenedor">
+      <h2>Nuestro menú</h2>
+      <p class="intro">Filtra por categoría y agrega tu favorito al pedido.</p>
+
+      <div class="filtros" role="group" aria-label="Filtrar el menú por categoría">
+        <button class="filtro" data-cat="todo" aria-pressed="true">Todo</button>
+        <button class="filtro" data-cat="hamburguesas" aria-pressed="false">Hamburguesas</button>
+        <button class="filtro" data-cat="combos" aria-pressed="false">Combos</button>
+        <button class="filtro" data-cat="acompanantes" aria-pressed="false">Acompañantes</button>
+        <button class="filtro" data-cat="bebidas" aria-pressed="false">Bebidas</button>
+      </div>
+
+      <div class="rejilla" id="platos">
+        <article class="plato" data-cat="hamburguesas"><div class="foto" aria-hidden="true"><img src="img/ilya-mashkov-_qxbJUr9RqI-unsplash-Photoroom.png" alt="Demostración 1"></div><div class="cuerpo"><h3>Clásica</h3><p>Carne de res, queso cheddar, lechuga, tomate y salsa de la casa.</p><div class="pie-plato"><span class="precio">$16.900</span><button class="btn mini" data-pedir="Clásica">Agregar</button></div></div></article>
+        <article class="plato" data-cat="hamburguesas"><div class="foto" aria-hidden="true"><img src="img/jonathan-borba-uQNz5RLIRLA-unsplash-Photoroom.png" alt="Demostración 2"></div><div class="cuerpo"><h3>Doble Carne y Tocineta</h3><p>Doble carne, tocineta crocante, queso y cebolla caramelizada.</p><div class="pie-plato"><span class="precio">$24.900</span><button class="btn mini" data-pedir="Doble Tocineta">Agregar</button></div></div></article>
+        <article class="plato" data-cat="hamburguesas"><div class="foto" aria-hidden="true"><img src="img/francesco-liotti-wGqxDpm9Yg8-unsplash-Photoroom.png" alt="Demostración 3"></div><div class="cuerpo"><h3>Pepper</h3><p>Carne a la parrilla, jalapeños, queso pepper jack y salsa chipotle.</p><div class="pie-plato"><span class="precio">$21.900</span><button class="btn mini" data-pedir="Picante">Agregar</button></div></div></article>
+        <article class="plato" data-cat="combos"><div class="foto" aria-hidden="true"><img src="img/jonathan-borba-cg39cG74kcg-unsplash-Photoroom.png" alt="Demostración 4"></div><div class="cuerpo"><h3>Combo Clásico</h3><p>Clásica, papas medianas y gaseosa de 400 ml.</p><div class="pie-plato"><span class="precio">$25.900</span><button class="btn mini" data-pedir="Combo Clásico">Agregar</button></div></div></article>
+        <article class="plato" data-cat="combos"><div class="foto" aria-hidden="true"><img src="img/irham-setyaki-_Uwf4MjUhGE-unsplash-Photoroom.png" alt="Demostración 5"></div><div class="cuerpo"><h3>Combo Pollo</h3><p>Sándwich de pollo apanado, papas, ensalada y bebida.</p><div class="pie-plato"><span class="precio">$27.900</span><button class="btn mini" data-pedir="Combo Pollo Crispy">Agregar</button></div></div></article>
+        <article class="plato" data-cat="acompanantes"><div class="foto" aria-hidden="true"><img src="img/joe-darams-aIN58RJSmqM-unsplash-Photoroom.png" alt="Demostración 6"></div><div class="cuerpo"><h3>Aros de cebolla</h3><p>Ocho aros empanizados con salsa BBQ.</p><div class="pie-plato"><span class="precio">$8.500</span><button class="btn mini" data-pedir="Aros de cebolla">Agregar</button></div></div></article>
+        <article class="plato" data-cat="bebidas"><div class="foto" aria-hidden="true"><img src="img/chris-boland-V9SxgOF-G9Y-unsplash-Photoroom.png" alt="Demostración 7"></div><div class="cuerpo"><h3>Malteada de vainilla</h3><p>Helado artesanal, leche y crema chantilly. 400 ml.</p><div class="pie-plato"><span class="precio">$12.900</span><button class="btn mini" data-pedir="Malteada de vainilla">Agregar</button></div></div></article>
+        <article class="plato" data-cat="bebidas"><div class="foto" aria-hidden="true"><img src="img/jake-charles-O9Whoh12czM-unsplash-Photoroom.png" alt="Demostración 8"></div><div class="cuerpo"><h3>Limonada Natural</h3><p>Limón natural, hielo y hierbabuena. 500 ml.</p><div class="pie-plato"><span class="precio">$6.900</span><button class="btn mini" data-pedir="Limonada">Agregar</button></div></div></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="promos" id="promos">
+    <div class="contenedor">
+      <h2>Promociones</h2>
+      <div class="rejilla">
+        <article class="promo"><strong>2×1</strong><h3>Todos los jueves paga uno lleva dos</h3><p>Lleva dos Clásicas y paga solo una.</p></article>
+        <article class="promo"><strong>-10 %</strong><h3>Combo estudiante</h3><p>Muestra tu carné estudiantil de lunes a jueves y ahorra en cualquier combo.</p></article>
+        <article class="promo"><strong>Papas Invitadas</strong><h3>Todos los días</h3><p>En pedidos superiores a $50.000, las papas son 100% gratis.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section id="preguntas">
+    <div class="contenedor faq">
+      <h2>Preguntas frecuentes</h2>
+      <details><summary>¿Cuánto tarda un pedido?</summary><p>En el local, entre 8 y 10 minutos. A domicilio, entre 30 y 40 minutos según la zona.</p></details>
+      <details><summary>¿Tienen opciones vegetarianas?</summary><p>Sí. Puedes pedir la Clásica con frijol negro y queso, sin costo extra.</p></details>
+      <details><summary>¿Qué medios de pago aceptan?</summary><p>Efectivo, tarjeta débito, crédito o pagos digitales.</p></details>
+    </div>
+  </section>
+
+  <section class="pedido" id="pedido">
+    <div class="contenedor">
+      <div>
+        <h2>Haz tu pedido</h2>
+        <p class="intro">Completa el formulario y te llamamos en pocos minutos.</p>
+        <p><strong>¿Prefieres llamar directamente?</strong><br>Escríbenos o llámanos al <a href="tel:+576015551234">333 205 2053</a>.</p>
+      </div>
+      <form id="form-pedido" novalidate>
+        <label>Nombre<input type="text" name="nombre" required placeholder="Tu nombre" autocomplete="name"></label>
+        <label>Teléfono<input type="tel" name="telefono" required pattern="[0-9 +()-]{7,15}" placeholder="300 123 4567" autocomplete="tel"></label>
+        <label>Tu pedido<select name="plato" id="select-plato" required><option value="">Elige un plato</option></select></label>
+        <label>Cantidad<input type="number" name="cantidad" min="1" max="10" value="1" required></label>
+        <label>Detalles (Opcional)<textarea name="notas" rows="2" placeholder="Sin cebolla, extra salsa…"></textarea></label>
+        <button class="btn" type="submit">Enviar pedido</button>
+        <p class="mensaje" id="mensaje" role="status" hidden></p>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer class="pie" id="contacto">
+  <div class="contenedor">
+    <div class="cols">
+      <div><h2>El Molino</h2><p>Comida rápida hecha con ingredientes frescos, todos los días.</p></div>
+      <div><h2>Horario</h2><ul><li>Lunes a Domingo de 11:00 a. m. a 11:00 p. m.</li></ul></div>
+      <div><h2>Contacto</h2><address style="font-style:normal"><ul><li>Calle 254 #20-36, local 12</li><li><a href="tel:+576015551234">(601) 555 1234</a></li><li><a href="mailto:hola@fogonexpress.com">ejemplo1234@gmail.com</a></li></ul></address></div>
+      <div><h2>Enlaces</h2><ul><li><a href="#menu">Menú</a></li><li><a href="#promos">Promociones</a></li><li><a href="#pedido">Pedir ahora</a></li></ul></div>
+    </div>
+    <small>© 2026 Cristian Macias | Hecho con fines educativos</small>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
